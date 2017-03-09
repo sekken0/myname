@@ -1,0 +1,7 @@
+<h1>投稿を編集する</h1>
+<%= form_tag update_article_path(@article.id), method: 'patch' do %>
+  <%= text_field_tag :title, @article.title %>
+  <%= text_area_tag :body, @article.body %>
+  <%= text_area_tag :author, @article.author %>
+  <%= submit_tag '保存' %>
+<% end %>
